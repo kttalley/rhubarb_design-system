@@ -16,7 +16,7 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContainer = styled.div`
-  background-color: ${color.black};
+  background-color: ${color.gray.g4};
   margin: 0 auto;
   position: absolute:
   top: 75px;
@@ -30,7 +30,8 @@ const ModalContainer = styled.div`
   border-radius: 8px;
   overflow: auto;
   border: 2px solid ${color.pink};
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.6)
+  backdrop-filter: blur(16px);
+  box-shadow: 0px 10px 20px ${color.gray.g4};
 `;
 
 const ModalHeader = styled.div`
@@ -43,7 +44,8 @@ const ModalHeader = styled.div`
 `;
 
 const ModalBody = styled.div`
-  padding: ${space[5] + 'px'}
+  padding: ${space[5] + 'px'};
+  display:block;
 
 `;
 

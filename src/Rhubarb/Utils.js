@@ -58,7 +58,12 @@ export const color = {
   gray: {
     g1: '#606060',   // Used for text
     g2: '#313131',   // Used for headings
-    g3: '#181818',   // Used for backgrounds
+    g3: '#181818', 
+    g4: 'rgba(0,0,0,0.4)',
+    g5: '',
+    g6: 'rgba(0,0,0,0.6)',
+    g8: 'rgba(0,0,0,0.8)'
+      // Used for backgrounds
   },
   white: '#FFFFFF',
   black: '#000000'

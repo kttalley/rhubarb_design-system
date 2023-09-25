@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DocsSection, DocsColorBox, DocsModalContainer, DocsCodeBlock } from './Docs';
+import { DocsSection, DocsColorBox, DocsModalContainer, DocsModalContainerContentExample, DocsCodeBlock } from './Docs';
 import Icon from './Rhubarb/Icon'
 
 import {
@@ -31,6 +31,8 @@ class App extends Component {
           <DocsColorBox color={color.gray.g1}>g1</DocsColorBox>
           <DocsColorBox color={color.gray.g2}>g2</DocsColorBox>
           <DocsColorBox color={color.gray.g3}>g3</DocsColorBox>
+          <DocsColorBox color={color.gray.g4}>g4</DocsColorBox>
+          <DocsColorBox color={color.gray.g5} style={{background: "url('https://design.kristiantalley.com/ktt-cloud/art/tumblr_mc26d0dJLj1qfchfvo1_1280.jpg')", outline: color.accent.dark + " solid 1px"}}>g5</DocsColorBox>
           <DocsColorBox color="white">white</DocsColorBox>
           <DocsColorBox color={color.black}>black</DocsColorBox>
           <DocsColorBox >no props</DocsColorBox>
@@ -81,8 +83,17 @@ class App extends Component {
         <DocsSection>
           <h2>Modals</h2>
          <DocsModalContainer color={color.accent.dark}>
+          <DocsModalContainerContentExample>
+            <h1>Hello, here is a bunch of content. Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.</h1>
+          </DocsModalContainerContentExample>
             <Modal header="Header">
-              Modal Body
+              <p>This is the Modal Body.
+              We can describe some stuff here.
+              No worries.</p>
+              <span><Btn roundness="pill">Cool!</Btn>
+              <Btn color={color.accent.dark}  roundness="pill" style={{outline: 'solid white 1px'}}>Not cool.</Btn>
+              </span>
+              
             </Modal>
             
          </DocsModalContainer >
