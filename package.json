@@ -1,6 +1,6 @@
 {
   "name": "Rhubarb Design System",
-  "homepage": "https://design.kristiantalley.com/projects/rhubarb-ds/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
