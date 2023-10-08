@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { DocsSection, DocsColorBox, DocsModalContainer, DocsModalContainerContentExample, DocsCodeBlock } from './Docs';
 import Icon from './Rhubarb/Icon'
-
 import {
   GlobalStyle,
   Btn,
   Modal,
   fontSize,
+  coreColor,
   color,
 } from './Rhubarb';
 
@@ -19,8 +19,41 @@ class App extends Component {
         <DocsSection>
           <h1>Rhubarb Design System</h1>
         </DocsSection>
+         <DocsSection>
+          <h2>Core Colors</h2>
+          <h3>Pink</h3>
+          <DocsColorBox color={coreColor.pink[10]} style={{color: "black"}}>pink10</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[20]}>pink20</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[30]}>pink30</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[40]}>pink40</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[50]} style={{color: "black"}}>pink50</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[60]}>pink60</DocsColorBox>
+                  <DocsColorBox color={coreColor.pink[70]}>pink70</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[80]}>pink80</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[90]}>pink90</DocsColorBox>
+          <DocsColorBox color={coreColor.pink[100]}>pink100</DocsColorBox>
+          <h3>Orange</h3>
+          <DocsColorBox color={coreColor.orange[10]} style={{color: "black"}}>orange10</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[20]} style={{color: "black"}}>orange20</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[30]} style={{color: "black"}}>orange30</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[40]} style={{color: "gray"}}>orange40</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[50]}>orange50</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[60]}>orange60</DocsColorBox>
+                  <DocsColorBox color={coreColor.orange[70]}>orange70</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[80]}>orange80</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[90]}>orange90</DocsColorBox>
+          <DocsColorBox color={coreColor.orange[100]}>orange100</DocsColorBox>
+          <h3>Grayscale</h3>
+          <DocsColorBox color="white" style={{color: "gray"}}> white</DocsColorBox>
+          <DocsColorBox color={color.gray.g1}>g1</DocsColorBox>
+          <DocsColorBox color={color.gray.g2}>g2</DocsColorBox>
+          <DocsColorBox color={color.gray.g3}>g3</DocsColorBox>
+          <DocsColorBox color={color.gray.g4}>g4</DocsColorBox>
+          <DocsColorBox color={color.black}>black</DocsColorBox>
+          <DocsColorBox >no props</DocsColorBox>
+        </DocsSection>
         <DocsSection>
-          <h2>Colors</h2>
+          <h2>Semantic Colors</h2>
           <DocsColorBox color={color.primary.dark}>Primary dark</DocsColorBox>
           <DocsColorBox color={color.primary.light}>primary light</DocsColorBox>
           <DocsColorBox color={color.secondary.dark}>sec. dark</DocsColorBox>
@@ -28,13 +61,7 @@ class App extends Component {
           <DocsColorBox color={color.accent.dark}>accent dark</DocsColorBox>
           <DocsColorBox color={color.accent.light}>accent light</DocsColorBox>
           <DocsColorBox color={color.dui.background}>dui bg</DocsColorBox>
-          <DocsColorBox color={color.gray.g1}>g1</DocsColorBox>
-          <DocsColorBox color={color.gray.g2}>g2</DocsColorBox>
-          <DocsColorBox color={color.gray.g3}>g3</DocsColorBox>
-          <DocsColorBox color={color.gray.g4}>g4</DocsColorBox>
-          <DocsColorBox color={color.gray.g5} style={{background: "url('https://design.kristiantalley.com/ktt-cloud/art/tumblr_mc26d0dJLj1qfchfvo1_1280.jpg')", outline: color.accent.dark + " solid 1px"}}>g5</DocsColorBox>
-          <DocsColorBox color="white">white</DocsColorBox>
-          <DocsColorBox color={color.black}>black</DocsColorBox>
+          <DocsColorBox color={color.gray.g5} style={{background: "url('https://design.kristiantalley.com/ktt-cloud/art/tumblr_mc26d0dJLj1qfchfvo1_1280.jpg')", outline: color.accent.dark + " solid 1px"}}>bgImg</DocsColorBox>
           <DocsColorBox >no props</DocsColorBox>
         </DocsSection>
         <DocsSection>
@@ -83,9 +110,9 @@ class App extends Component {
         <DocsSection>
           <h2>Modals</h2>
          <DocsModalContainer color={color.accent.dark}>
-          <DocsModalContainerContentExample>
+          {/* <DocsModalContainerContentExample>
             <h1>Hello, here is a bunch of content. Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.Hello, here is a bunch of content.</h1>
-          </DocsModalContainerContentExample>
+          </DocsModalContainerContentExample> */}
             <Modal header="Header">
               <p>This is the Modal Body.
               We can describe some stuff here.

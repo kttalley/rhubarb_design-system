@@ -21,10 +21,41 @@
 //   gray3: '#181818'
   
 // }
+ // core color tokens
+  
+export const coreColor = {
+   pink: {
+    "10": "#ffe0e7",
+    "20": "#ffc7d2",
+    "30": "#fc97aa",
+    "40": "#fd7eb5",
+    "50": "#FF4081", // Given value
+    "60": "#d43b52",
+    "70": "#a12a3a",
+    "80": "#66262d",
+    "90": "#3b1e21",
+    "100": "#241617"
+  },
+  orange: {
+    "10": "#FED5AC",
+    "20": "#FEBA7F",
+    "30": "#FD884E",
+    "40": "#FF8888",
+    "50": "#FF6E6E", // Given value
+    "60": "#C94403",
+    "70": "#9C3202",
+    "80": "#682601",
+    "90": "#411B04",
+    "100": "#291303" // Dark mode (Matching pink 100)
+  }
+  
+}
 
-
+ //semantic color tokens
 export const color = {
-  // Core Colors
+ 
+
+ 
   primary: {
     dark: '#165247',
     light: '#1A6710',
@@ -34,8 +65,10 @@ export const color = {
     light: '#719FA7',
   },
   accent: {
-    dark: '#FF6E6E',
-    light: '#FF4081',
+    // dark: '#FF6E6E',
+    // light: '#FF4081',
+    dark: coreColor.orange[50],
+    light: coreColor.pink[50],
   },
 
   // Grayscale for Light User Interface (LUI)
@@ -93,10 +126,20 @@ export const fontSize = [
 
 export const isDarkBackground = function(color) {
   if (color) {
-    if (color.includes('light') || color.includes('lui') || color.includes('white')) {
+    
+    const numericPart = parseInt(color.replace(/[^\d]/g, ''), 10);
+    
+    // Check if the numeric part is between 60 and 100
+    if (numericPart >= 60 && numericPart <= 100) {
       return false;
     } else {
       return true;
     }
   }
+  //   if (color.includes('light') || color.includes('lui') || color.includes('white')) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // }
 }
