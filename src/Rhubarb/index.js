@@ -22,3 +22,4 @@ export * from './Input';
 export * from './Utils';
 export * from './Modal';
 export * from './Icon';
+export * from './ColorTokens';

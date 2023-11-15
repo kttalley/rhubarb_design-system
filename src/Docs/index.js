@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {color, space, isDarkBackground, fontSize} from '../Rhubarb';
+import {color, space, isDarkBackground, fontSize, themeColors} from '../Rhubarb';
 
 
 export const DocsColorBox = styled.div`
@@ -27,7 +27,7 @@ export const DocsSection = styled.section`
   background-color: ${ props => props.color ? props.color : color.dui.background };
   box-shadow: 0px 10px 30px rgba(0,0,0,0.6)
   color: ${props => isDarkBackground(props.color) ? color.gray.g1 : color.white};
-  border: ${props => props.color === color.dui.background ? 'none' :  '2px solid' + color.primary.dark }
+  border: ${props => props.color === color.dui.background ? 'none' :  '2px solid' + themeColors.dui.outline.primary }
 `;
 
 export const DocsModalContainer = styled.section`

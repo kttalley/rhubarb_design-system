@@ -7,8 +7,11 @@ import {
   Modal,
   fontSize,
   coreColor,
-  color,
+  coreColors,
+  themeColors,
+  color
 } from './Rhubarb';
+
 
 class App extends Component {
   render() {
@@ -22,6 +25,39 @@ class App extends Component {
          <DocsSection>
           <h2>Core Colors</h2>
           <h3>Pink</h3>
+          <DocsColorBox color={coreColors.pink[40]}style={{color: `${coreColors.green[80]}`}}>Pink40</DocsColorBox>
+          <DocsColorBox color={coreColors.pink[50]}style={{color: `${coreColors.green[80]}`}}>Pink50</DocsColorBox>
+          <DocsColorBox color={coreColors.pink[60]}style={{color: `${coreColors.black}`}}>Pink60</DocsColorBox>
+          <h3>Green</h3>
+          <DocsColorBox color={coreColors.green[60]}style={{color: `${coreColors.pink[50]}`}}>Green60</DocsColorBox>
+          <DocsColorBox color={coreColors.green[70]}style={{color: `${coreColors.pink[50]}`}}>Green70</DocsColorBox>
+          <DocsColorBox color={coreColors.green[80]}style={{color: `${coreColors.pink[50]}`}}>Green80</DocsColorBox>
+
+          </DocsSection>
+          <DocsSection>
+          <h2>Theme Colors</h2>
+          <h3>Dark UI</h3>
+          <DocsColorBox color={themeColors.dui.background.primary} style={{color: `${themeColors.dui.text.primary}`}}>Primary</DocsColorBox>
+          <DocsColorBox color={themeColors.dui.background.secondary} style={{color: `${themeColors.dui.text.secondary}`}}>Secondary</DocsColorBox>
+          <DocsColorBox color={themeColors.dui.background.tertiary} style={{color: `${themeColors.dui.text.tertiary}`}}>Tertiary</DocsColorBox>
+          </DocsSection>
+
+          <DocsSection
+            color={themeColors.lui.outline.primary}
+            style={{
+              backgroundColor: `${themeColors.lui.background.secondary}`,
+              color: `${themeColors.lui.text.primary}`,
+              outline: `${themeColors.lui.outline.primary}`
+            }}
+          >
+          <h2>Theme Colors</h2>
+          <h3>Light UI</h3>
+          <DocsColorBox color={themeColors.lui.background.primary} style={{color: `${themeColors.lui.text.primary}`}}>Primary</DocsColorBox>
+          <DocsColorBox color={themeColors.lui.background.secondary} style={{color: `${themeColors.lui.text.secondary}`}}>Secondary</DocsColorBox>
+          <DocsColorBox color={themeColors.lui.background.tertiary} style={{color: `${themeColors.lui.text.tertiary}`}}>Tertiary</DocsColorBox>
+          </DocsSection>
+          <DocsSection>
+          <h3>Old Pink</h3>
           <DocsColorBox color={coreColor.pink[10]} style={{color: "black"}}>pink10</DocsColorBox>
           <DocsColorBox color={coreColor.pink[20]}>pink20</DocsColorBox>
           <DocsColorBox color={coreColor.pink[30]}>pink30</DocsColorBox>
